@@ -1,10 +1,9 @@
-var Dispatcher = require('flux').Dispatcher,
+var Dispatcher = require('flux').Dispatcher;
+var assign = require('object-assign');
 const DISPATCHER_CONSTANTS = {
   SERVER_ACTION: "SERVER_ACTION",
   VIEW_ACTION: "VIEW_ACTION"
 };
-
-var assign = require('object-assign');
 
 var AppDispatcher = assign(new Dispatcher(), {
 
@@ -26,12 +25,12 @@ var AppDispatcher = assign(new Dispatcher(), {
       // console.log("waiting..." + action.actionType); //log the action waiting to be dispatched
 
       // push onto callback queue
-      setTimeout(
-        function(){
-          this.handleViewAction(action);
-        }.bind(this),
-      0);
+      setTimeout(function(){
+        this.handleViewAction(action);
+      }.bind(this), 0);
+
     } else {
+
       var payload = {
         source: DISPATCHER_CONSTANTS.VIEW_ACTION,
         action: action
@@ -43,7 +42,6 @@ var AppDispatcher = assign(new Dispatcher(), {
       // console.log(payload);
     }
   }
-
 });
 
 module.exports = AppDispatcher;
