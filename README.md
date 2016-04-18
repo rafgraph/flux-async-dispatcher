@@ -1,4 +1,4 @@
-### Asynchronous app dispatcher for flux design pattern with react
+## Asynchronous app dispatcher for flux design pattern with react
 
 - Built on top of facebook's flux dispatcher to allow you to call dispatch while in the middle of dispatching (intended for use with react, but could be used wherever flux is deployed)
 
@@ -20,18 +20,3 @@
 - Using the object-assign operator
  - You may need to add to package.json dependencies: "object-assign": "^4.0.1"
  - This async dispatcher can also be created without using the assign operator, by monkey patching the flux dispatcher, e.g. `Dispatcher.prototype.handleViewAction = function(action) { ... };`
-
-<!-- ```javascript
-var Dispatcher = require('flux').Dispatcher
-
-// monkey patch the the flux dispatcher
-Dispatcher.prototype.handleServerAction = function(action) {
- ...
-};
-
-Dispatcher.prototype.handleViewAction = function(action) {
- ...
-};
-
-var AppDispatcher = new Dispatcher();
-``` -->
