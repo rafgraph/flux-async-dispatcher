@@ -18,5 +18,5 @@
 
 
 - Using the object-assign operator
- - You may need to add to package.json dependencies: "object-assign": "^4.0.1"
+ - You may need to `$ npm install --save object-assign` to add object-assign to package.json
  - This async dispatcher can also be created without using the assign operator, by monkey patching the flux dispatcher, e.g. `Dispatcher.prototype.handleViewAction = function(action) { ... };`
