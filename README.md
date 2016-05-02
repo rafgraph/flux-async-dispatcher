@@ -1,6 +1,6 @@
 ## Asynchronous app dispatcher for flux design pattern with react
 
-- Built on top of facebook's flux dispatcher to allow you to call dispatch while in the middle of dispatching (intended for use with react, but could be used wherever flux is deployed)
+- Built on top of facebook's [flux dispatcher](https://github.com/facebook/flux#installing-flux) to allow you to call dispatch while in the middle of dispatching (intended for use with react, but could be used wherever flux is deployed)
 
 
 - Note that when a dispatch starts, it goes through the whole dispatch loop before it finishes:
