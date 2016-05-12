@@ -1,4 +1,4 @@
-## Asynchronous app dispatcher for flux design pattern with react
+## Asynchronous app dispatcher for Flux design pattern with React
 
 - Built on top of facebook's [flux dispatcher](https://github.com/facebook/flux#installing-flux) to allow you to call dispatch while in the middle of dispatching (intended for use with react, but could be used wherever flux is deployed)
 
